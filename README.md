@@ -26,15 +26,20 @@ SPRING_MAIL_USERNAME=seuemail@gmail.com
 SPRING_MAIL_PASSWORD=suasenha
 ```
 
+**Importante:** Para utilizar o envio de e-mails via Gmail, é necessário gerar uma [senha de segurança específica para aplicativos](https://support.google.com/mail/answer/185833?hl=pt-BR). Essa senha é gerada automaticamente pelo Google e possui exatamente 16 caracteres. Essa senha deve ser utilizada na configuração abaixo.
+
 No `application.properties`, use:
+
 ```properties
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
 spring.mail.username=${SPRING_MAIL_USERNAME}
-spring.mail.password=${SPRING_MAIL_PASSWORD}
+spring.mail.password=${SENHA_SMTP}
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 ```
+
+
 
 ### 3. Instale as dependências
 ```sh
