@@ -54,8 +54,7 @@ mvn spring-boot:run
 ```json
 {
   "name": "Produto Teste",
-  "quantidadeEstoque": 10,
-  "limiteEstoqueBaixo": 5
+  "quantidadeEstoque": 10
 }
 ```
 
