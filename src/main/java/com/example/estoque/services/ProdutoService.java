@@ -24,11 +24,11 @@ public class ProdutoService {
     @Value("${EMAIL_DESTINATARIO}")
     private String emailDestinatario;
 
-    public Produto createdProductInDataBase(String name, int quantidadeEstoque, int limiteEstoqueBaixo){
+    public Produto createdProductInDataBase(String name, int quantidadeEstoque){
         Produto produto = new Produto();
         produto.setName(name);
         produto.setQuantidadeEstoque(quantidadeEstoque);
-        produto.setLimiteEstoqueBaixo(limiteEstoqueBaixo);
+        produto.setLimiteEstoqueBaixo(5);
         produtoRepository.save(produto);
         alertLowStock();
         return produto;
